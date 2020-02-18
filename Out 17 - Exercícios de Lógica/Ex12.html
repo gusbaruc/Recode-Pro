@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        var sBruto = Number(prompt("Qual será o salário bruto?"))
+        var vPrestacao = Number(prompt("Qual o valor da prestação?"))
+
+        if (vPrestacao >= (sBruto*0.3))
+            alert("O empréstimo não pode ser concebido!")
+        else
+            alert("Empréstimo concebido com sucesso!")
+    </script>
+</body>
+</html>

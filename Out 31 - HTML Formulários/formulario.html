@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link href="formulario.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+    <h1>Formulário de Inscrição</h1>
+
+    <form>
+        <p id="p1"> 
+            Nome: <br>
+            <input type="text" name="nome" placeholder="Digite seu nome completo">
+        </p>
+        
+        <p id="p1">
+            Endereço: <br>
+            <input type="text" name="endereco" placeholder="Digite seu endereço completo">
+        </p>
+        
+        <p id="p1">
+            e-mail: <br>
+            <input type="text" name="email" placeholder="Ex: email@email.com">
+        </p>
+        <br>
+        <p id="p1">
+            Selecione o curso desejado: <br>
+            <select name="curso">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">Javascript</option>
+                <option value="bstp">Bootstrap</option>
+                <option value="ang">Angular JS</option>
+                <option value="python">Python</option>
+            </select>
+        </p>
+        <br>
+        <p id="p1">
+            Marque as áreas de Computação do seu interesse: <br><br>
+            <input type="checkbox" name="area1" value="uix"> UI/UX &nbsp;
+            <input type="checkbox" name="area1" value="desenv"> Desenvolvimento &nbsp;
+            <input type="checkbox" name="area1" value="db"> Banco de Dados &nbsp;
+            <input type="checkbox" name="area1" value="rede"> Rede de Computadores &nbsp;
+            <input type="checkbox" name="area1" value="big"> Big Data <br>
+        </p>
+        <br>
+        <button type="reset" onclick="alert('Dados enviados com sucesso!')">Enviar</button>
+    </form>
+    </div>
+</body>
+</html>

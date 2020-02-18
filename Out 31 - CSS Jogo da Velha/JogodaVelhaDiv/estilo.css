@@ -1,0 +1,44 @@
+#section {
+    margin: auto;
+    width:300px;
+    height:300px;
+}
+ 
+#linha1 {
+    height:100px;
+    border-bottom: 1px solid black;
+}
+
+#linha2 {
+    height:100px;
+}
+ 
+#coluna1 {
+    width:100px;
+    height:100px;
+    float: left;
+    border-right: 1px solid black;
+}
+
+#coluna3 {
+    width:100px;
+    height:100px;
+    float: right;
+    border-left: 1px solid black;
+}
+
+#x {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: blue;
+}
+  
+#o {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: red;
+}

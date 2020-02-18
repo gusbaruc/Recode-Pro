@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='css/bootstrap.css'>
+    <title>Desafio 01</title>
+    
+    <style>
+        .coluna1 {
+            background-color: rgb(221, 220, 220);
+            height: 150px;
+            border-radius: 5px;
+        }
+        h1 {
+            position: relative;
+            top: 50px;
+            left: 20px;
+            font-weight: 400;
+        }
+        .linha1 {
+            position: relative;
+            top: 30px;
+            border-top: 1px solid rgb(221, 220, 220);
+            border-bottom: 1px solid rgb(221, 220, 220);
+        }
+        .linha2 {
+            position: relative;
+            top: 50px;
+            border-bottom: 1px solid rgb(221, 220, 220);
+        }
+        .linha3 {
+            background-color: rgb(221, 220, 220);
+            position: relative;
+            top: 60px;
+            height: 90px;
+            border-radius: 5px;
+        }
+        label {
+            position: relative;
+            top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col coluna1">
+                <h1>CALCULADORA<h1>
+            </div>
+        </div>
+
+        <div class="row linha1">
+            <div class="col"> <br>
+                <input type="text" class="form-control" placeholder="Digite um número" id="n1">
+            </div>
+            
+            <div class="col"> <br>
+                <select class="form-control" id="op">
+                    <option>--Selecione uma operação</option>
+                    <option value="1">Subtração</option>
+                    <option value="2">Adição</option>
+                    <option value="3">Multiplicação</option>
+                    <option value="4">Divisão</option>
+                </select>
+            </div>
+            
+            <div class="col"> <br>
+                <input type="text" class="form-control" placeholder="Digite um número" id="n2">
+                <br>
+            </div>  
+        </div>
+
+        <div class="row linha2 justify-content-end">
+            <div class="col-1">
+                <button type="button" class="btn btn-success" onclick="calculo()">Calcular</button>
+                <br><br>
+            </div>
+        </div>
+
+        <div class="row linha3">
+            <div class="col">
+                <label>Resultado:</label>
+                <input type="text" class="form-control" id="resultado" disabled>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function calculo() {
+            var valor1 = Number(document.getElementById("n1").value)
+            var valor2 = Number(document.getElementById("n2").value)
+            var operacao = Number(document.getElementById("op").value)
+
+            if (operacao == "1")
+                document.getElementById("resultado").value = valor1 - valor2
+            if (operacao == "2")
+                document.getElementById("resultado").value = valor1 + valor2
+            if (operacao == "3")
+                document.getElementById("resultado").value = valor1 * valor2
+            if (operacao == "4")
+                document.getElementById("resultado").value = valor1 / valor2
+        }
+    </script>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

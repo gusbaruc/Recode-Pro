@@ -1,0 +1,6 @@
+1) SELECT * FROM `cliente`
+2) SELECT * FROM `cliente` WHERE cliente_id > 100
+3) SELECT * FROM `cidade` WHERE pais_id=10
+4) SELECT COUNT(*) FROM `aluguel`
+5) SELECT COUNT(*) FROM `aluguel` WHERE cliente_id = 14
+6) SELECT primeiro_nome, ultimo_nome from `cliente` WHERE cliente_id in (SELECT cliente_id FROM `aluguel` WHERE aluguel_id = 1000);

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='css/bootstrap.css'>
+    <title>Desafio 01</title>
+
+    <style>
+        .container {
+            position: relative;
+            top: 20px;
+            background-color: rgb(241, 240, 240);
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!--LINHA 1-->
+        <div class="row">
+            <div class="col">
+                <h1>Calculadora</h1>
+                <hr>
+            </div>
+        </div>
+
+        <!--LINHA 2-->
+        <div class="row">
+            <div class="col">
+                <label>Informe um número:</label>
+                <input type="text" class="form-control" id="numero">
+            </div>
+
+            <div class="col align-self-end">
+                <button type="button" class="btn btn-success" onclick="calcular()">Calcular</button>
+            </div>
+        </div> <br><hr>
+
+        <!--LINHA 3-->
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <label>Arredondamento aritmético:</label>
+                <input type="text" class="form-control" id="aritmetico" disabled>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+                <label>Arredondamento inferior:</label>
+                <input type="text" class="form-control" id="inferior" disabled>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+                <label>Arredondamento superior:</label>
+                <input type="text" class="form-control" id="superior" disabled>
+            </div>
+        </div>
+        
+        <!--Linha 4--><br>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <label>Potência ^2:</label>
+                <input type="text" class="form-control" id="potencia2" disabled>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <label>Potência ^3:</label>
+                <input type="text" class="form-control" id="potencia3" disabled>
+            </div>
+        </div>
+        
+        <!--Linha 5--><br>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <label>Raiz Quadrada:</label>
+                <input type="text" class="form-control" id="raizQ" disabled>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <label>Raiz Cúbica:</label>
+                <input type="text" class="form-control" id="raizC" disabled>
+            </div>
+
+        </div><br>
+    </div>
+
+    <script>
+        function calcular() {
+            var num = Number(document.getElementById("numero").value)
+
+            var aritmetico = Math.round(num)
+            var superior = Math.ceil(num)
+            var inferior = Math.floor(num)
+            var potencia2 = Math.pow(num, 2)
+            var potencia3 = Math.pow(num, 3)
+            var raizQ = Math.sqrt(num)
+            var raizC = Math.cbrt(num)
+
+            document.getElementById("aritmetico").value = aritmetico
+            document.getElementById("superior").value = superior
+            document.getElementById("inferior").value = inferior
+            document.getElementById("potencia2").value = potencia2
+            document.getElementById("potencia3").value = potencia3
+            document.getElementById("raizQ").value = raizQ
+            document.getElementById("raizC").value = raizC
+        }
+
+    </script>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

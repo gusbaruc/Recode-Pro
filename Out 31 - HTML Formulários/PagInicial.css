@@ -1,0 +1,62 @@
+section {
+    margin: auto;
+    width: 900px;
+    height: 1200px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px gray;
+}
+
+#recode {
+    position: relative;
+    top: 20px;
+    left: 30%;
+    width: 40%;
+}
+
+p {
+    position: relative;
+    width: 96%;
+    top: 30px;
+    left: 18px;
+    font-weight: bold;
+}
+
+#alunos {
+    position: relative;
+    top: 50px;
+    left: 5%;
+    width: 90%;
+}
+
+#pContato {
+    position: relative;
+    text-align: center;
+    width: 96%;
+    top: 70px;
+    left: 18px;
+    font-weight: bold;
+}
+
+a:link, a:visited, a:hover {
+    text-decoration:none;
+    color: white;
+}
+
+button {
+    position: relative;
+    top: 60px;
+    left: 42.5%;
+    width: 15%;
+    height: 40px;
+    background-color: #4CAF50;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}

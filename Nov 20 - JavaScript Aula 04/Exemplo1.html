@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h2>Criando um objeto para uma string JSON</h2>
+    <p id="demo"></p>
+
+    <script>
+        //Atribuindo dados no formato JSON para a variável text
+        var text = '{"employees":[' +
+                    '{"firstName":"John","lastName":"Doe" },' +
+                    '{"firstName":"Anna","lastName":"Smith" },' +
+                    '{"firstName":"Peter","lastName":"Jones" }]}'
+        
+        //Convertendo variável text JSON para objeto JavaScript
+        obj = JSON.parse(text)
+
+        for(var i=0; i<obj.employees.length; i++) {
+            document.getElementById("demo").innerHTML +=
+            obj.employees[i].firstName + " " + obj.employees[i].lastName + "<br>"
+        }
+    </script>
+
+</body>
+</html>

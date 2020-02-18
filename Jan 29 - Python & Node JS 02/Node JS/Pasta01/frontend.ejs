@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body style="margin: auto">
+<div class="container">
+    <h1>Tecnologias Front-end</h1>
+    <% for(i=0; i<dados.length; i++) { %>
+    <table>
+        <tr>
+            <td style="width: 120px;">
+                <%= dados[i].nome %>
+            </td>
+        </tr>
+    </table>
+    <% } %>
+<br>
+</div>
+</body>
+</html>

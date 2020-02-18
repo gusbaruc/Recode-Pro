@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Aula 01 - Bootstrap</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
+    <style>
+        .container {
+            border: 0px;
+        }
+        #h4 {
+            text-align: center;
+        }
+        .destaque {
+            background-color: skyblue;
+            border: 1px solid black;
+        }
+        .LinhaMaior {
+            background-color: rgb(224, 224, 224);
+            border: 0px;
+            height: 150px;
+        }
+        .colunaNormal {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h4>Linha Simples</h4>
+        <div class="row"> <!-- Início da 1° linha -->
+            <div class="col destaque"> <!-- Início da 1° coluna-->
+                <p>Parte 1</p>
+            </div> <!-- Fim da 1° coluna-->
+
+            <div class="col destaque"> <!-- Início da 2° coluna-->
+                <p>Parte 2</p>
+            </div> <!-- Fim da 2° coluna-->
+
+            <div class="col destaque"> <!-- Início da 3° coluna-->
+                <p>Parte 3</p>
+            </div> <!-- Fim da 3° coluna-->
+        </div> <!-- Fim da 1° linha -->
+
+        <br><br>
+        <h4>Linha com tamanho de "col" definido</h4>
+        <div class="row">
+            <div class="col-5 destaque">
+                <p>Parte 1</p>
+            </div>
+
+            <div class="col-5 destaque">
+                <p>Parte 2</p>
+            </div>
+
+            <div class="col-2 destaque">
+                <p>Parte 3</p>
+            </div>
+        </div>
+
+        <br><br>
+        <h4>Linha com tamanho de "col" de acordo com os breakpoints</h4>
+        <!-- xs  <   544  px     Obs: O grid sempre será horizontal e com 12 colunas
+             sm  >=  544  px     Obs: Em resoluções menores do que as previstas pelo breakpoint,
+             md  >=  768  px          as 12 colunas são unificadas. Em resoluções iguais ou
+             lg  >=  992  px          maiores, as 12 colunas são criadas horizontalmente.
+             xl  >=  1200 px     -->
+        <div class="row">
+            <div class="col-md-5 col-sm-12 destaque">
+                <p>Parte 1</p>
+            </div>
+
+            <div class="col-md-5 col-sm-12 destaque">
+                <p>Parte 2</p>
+            </div>
+
+            <div class="col-md-2 col-sm-12 destaque">
+                <p>Parte 3</p>
+            </div>
+        </div>
+
+        <br><br>
+        <h4>Alinhamento vertical</h4>
+        <div class="row LinhaMaior align-items-center">
+            <div class="col destaque">
+                <p>Parte 1</p>
+            </div>
+        
+            <div class="col destaque">
+                <p>Parte 2</p>
+            </div>
+        
+            <div class="col destaque">
+                <p>Parte 3</p>
+            </div>
+        </div>
+        
+        <br><br>
+        <h4>Alinhamento vertical individual</h4>
+        <div class="row LinhaMaior">
+            <div class="col destaque colunaNormal align-self-start">
+                <p>Parte 1</p>
+            </div>
+    
+            <div class="col destaque colunaNormal align-self-center">
+                <p>Parte 2</p>
+            </div>
+    
+            <div class="col destaque colunaNormal align-self-end">
+                <p>Parte 3</p>
+            </div>
+        </div>
+
+        <br><br>
+        <h4>Alinhamento horizontal</h4>
+        <div class="row LinhaMaior justify-content-end">
+            <div class="col-3 destaque colunaNormal">
+                <p>Parte 1</p>
+            </div>
+    
+            <div class="col-3 destaque colunaNormal">
+                <p>Parte 2</p>
+            </div>
+    
+            <div class="col-3 destaque colunaNormal">
+                <p>Parte 3</p>
+            </div>
+        </div>
+
+        <br><br>
+        <h4>Alinhamento horizontal 02 (arround-between)</h4>
+        <div class="row LinhaMaior justify-content-around">
+            <div class="col-3 destaque colunaNormal">
+                <p>Parte 1</p>
+            </div>
+    
+            <div class="col-3 destaque colunaNormal">
+                <p>Parte 2</p>
+            </div>
+    
+            <div class="col-3 destaque colunaNormal">
+                <p>Parte 3</p>
+            </div>
+        </div>
+
+        <br><br>
+        <h4>Deslocando linha</h4>
+        <div class="row LinhaMaior">
+            <div class="col-3 destaque colunaNormal offset-2">
+                <p>Parte 1</p>
+            </div>
+    
+            <div class="col-3 destaque colunaNormal">
+                <p>Parte 2</p>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <!-- Script JS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

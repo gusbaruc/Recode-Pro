@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        var fitas = Number(prompt("Há quantas fitas no estoque?"))
+        var aluguel = Number(prompt("Quanto é cobrado por aluguel?"))
+        
+        var totMensal = aluguel * ((1/3)*fitas)
+        var multa = aluguel * 1.10
+        var estragadas = fitas*0.02
+
+        document.write("Faturamento anual: R$", 12*totMensal)
+        document.write("<br>Valor ganho com multas por mês: ", multa * ((1/10)*fitas))
+        document.write("<br>Quantidades de fita no estoque até o final do ano: ", fitas + ((1/10)*fitas) - estragadas)
+    </script>
+</body>
+</html>

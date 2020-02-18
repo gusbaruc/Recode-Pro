@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        var i = 1, varEstoque = 0
+        var estoque = Number(prompt("Olá! Por favor, digite o número total de mercadorias do estoque: "))
+        
+        while (i <= estoque) {
+            varEstoque += Number(prompt(`Digite o valor da ${i}a mercadoria: `))
+            i++
+        }
+        document.write("O valor total de mercadoria em estoque é R$: "+ varEstoque)
+        document.write("<br>Valor médio do total de mercadorias: R$"+ varEstoque/estoque)
+    </script>
+</body>
+</html>

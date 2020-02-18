@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='css/bootstrap.css'>
+    <title>Desafio 01</title>
+    
+    <style>
+        .coluna1 {
+            background-color: rgb(190, 73, 73);
+            color: white;
+            height: 150px;
+            border-radius: 5px;
+        }
+        h1 {
+            position: relative;
+            top: 50px;
+            left: 20px;
+            font-weight: 400;
+            text-align: center;
+        }
+        .linha1 {
+            position: relative;
+            top: 30px;
+            border-top: 1px solid rgb(221, 220, 220);
+            border-bottom: 1px solid rgb(221, 220, 220);
+        }
+        .linha2 {
+            position: relative;
+            top: 50px;
+            border-bottom: 1px solid rgb(221, 220, 220);
+        }
+        .linha3 {
+            background-color: rgb(190, 73, 73);
+            position: relative;
+            top: 60px;
+            height: 90px;
+            border-radius: 5px;
+        }
+        label {
+            position: relative;
+            top: 8px;
+            color: white;
+        }
+        h4 {
+            position: relative;
+            left: 20px;
+        }
+        img {
+            position: relative;
+            top: 70px;
+        }
+        #resultado {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col coluna1">
+                <h1>SORTEADOR DE SUFLAIR<h1>
+            </div>
+        </div>
+
+        <div class="row linha1">
+            <div class="col"> <br>
+                <input type="text" class="form-control" placeholder="Digite um número" id="n1">
+            </div>
+            
+            <div class="col-1"> <br>
+                <h4>á</h4>
+            </div>
+            
+            <div class="col"> <br>
+                <input type="text" class="form-control" placeholder="Digite um número" id="n2">
+                <br>
+            </div>  
+        </div>
+
+        <div class="row linha2 justify-content-end">
+            <div class="col-1">
+                <button type="button" class="btn btn-success" onclick="calculo()">Calcular</button>
+                <br><br>
+            </div>
+        </div>
+
+        <div class="row linha3">
+            <div class="col">
+                <label>Resultado:</label>
+                <input type="text" class="form-control" id="resultado" disabled>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <img src="img/suflair.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function calculo() {
+            var valor1 = Number(document.getElementById("n1").value)
+            var valor2 = Number(document.getElementById("n2").value)
+
+            document.getElementById("resultado").value = `Parabéns, o grupo ${Math.floor(Math.random() * (valor2 - valor1 + 1) + valor1)} foi o campeão!! :)`
+        }
+    </script>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

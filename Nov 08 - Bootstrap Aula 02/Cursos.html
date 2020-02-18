@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='css/bootstrap.css'>
+    <title>Bootstrap Recode</title>
+</head>
+<body>
+    <!--Inicio da Navbar-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!--Logotipo-->
+        <a href="#" class="navbar-brand">
+            <img src="img/logo.jpg" style="width: 30px; height: auto;" class="d-inline-block align-top"> Recode Pro - SP
+        </a>
+        <!--Botão aparece quando a tela estiver em resolução menor que 768px-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Inicio dos itens do menu que serão ocultos / exibidos no cliente do botão acima-->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="Home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Cursos.html">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contato.html">Contato</a>
+                </li>
+                <!--Inicio do Dropdown-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Tecnologias
+                    </a>
+                    <!--Itens do Dropdown-->
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">HTML 5</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">Javascript</a>
+                    </div>
+                </li>
+                <!--Fim do Dropdown-->
+            </ul>
+        </div>
+    </nav>
+    <!--Fim da Navbar-->
+
+    <!--Inicio do Container-->
+    <div class="container">
+        <!--Inicio Jumbotron-->
+        <div class="jumbotron">
+            <h1>Recode Pro - São Paulo</h1>
+            <p>O maior treinamento Full Stack do Brasil</p>
+            <p>Professor: Flávio Mota</p>
+        </div>
+        <!--Fim do Jumbotron-->
+        <!--Inicio da linha dos Accordions-->
+        <div class="container">
+            <h2>Conheça nossa formação</h2>
+            <!--Inicio do Accordion-->
+            <div id="accordion">
+                <!--Inicio do Accordion 01-->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                            Programe o básico
+                        </a>
+                    </div>
+                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                        <div class="card-body">
+                            Nesse módulo vamos conhecer as tecnologias básicas para a contrução de páginas web, HTML. CSS, Javascript
+                            além de Lógica de Programação e um programa especial de empregabilidade com muitas palestras e
+                            mentoria de profissionais da área.
+                        </div>
+                    </div>
+                </div>
+                <!--Inicio do Accordion 02-->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                            Front End
+                        </a>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            Nesse módulo vamos conhecer as tecnologias básicas para a contrução de páginas web, HTML. CSS, Javascript
+                            além de Lógica de Programação e um programa especial de empregabilidade com muitas palestras e
+                            mentoria de profissionais da área.
+                        </div>
+                    </div>
+                </div>
+                <!--Inicio do Accordion 03-->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                            Programação Front End
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            Nesse módulo vamos conhecer as tecnologias básicas para a contrução de páginas web, HTML. CSS, Javascript
+                            além de Lógica de Programação e um programa especial de empregabilidade com muitas palestras e
+                            mentoria de profissionais da área.
+                        </div>
+                    </div>
+                </div>
+                <!--Fim do Accordion 03-->
+            </div>
+            <!--Fim do Accordion-->
+        </div>
+        <!--Fim da linha dos Accordions-->
+    </div>
+    <!--Fim do container-->
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

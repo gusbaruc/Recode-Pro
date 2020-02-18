@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        var A = [], B = [], C = []
+                
+        for(var i=0; i<=4; i++) {
+            A[i] = Number(prompt("Digite o "+ (i+1) +"° valor do array A:"))
+            //C[i] = A[i]
+        }
+
+        for(var i=0; i<=4; i++) {
+            B[i] = Number(prompt("Digite o "+ (i+1) +"° valor do array B:"))
+            //C[i+5] = B[i]
+        }
+        
+        //Comando para unir 2 strings em uma só
+        C = A.concat(B)
+        document.write("Listagem de todos os valores digitados: <br>")
+
+        for(var i=0; i <= 9; i++) {
+            document.write(C[i] + "<br>")
+        }
+    </script> 
+</body>
+</html>

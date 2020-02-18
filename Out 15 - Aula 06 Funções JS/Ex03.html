@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        var saldo = Number(prompt("Digite seu saldo atual:"))
+        var cheque = Number(prompt("Digite o valor do cheque que será descontado:"))
+
+        function debito(plusle, minun) {
+            if (minun <= plusle)
+                alert("Pagamento realizado com sucesso! \nSaldo atual: "+ (plusle-minun))
+            else
+                alert("O débito não pode ser realizado! \nErro: Saldo insuficiente")
+        }
+
+        debito(saldo, cheque)
+    </script>
+</body>
+</html>

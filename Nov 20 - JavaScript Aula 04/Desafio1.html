@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        //Atribuindo dados no formato JSON para a variável dados
+        var dados = {
+            "funcionarios":[
+                {
+                    "nome":"João da Silva",
+                    "skills":["Java","PHP","Javascript","React"]
+                },
+                {
+                    "nome":"Renata Souza",
+                    "skills":["Python","Angular"]
+                },
+                {
+                    "nome":"Rodrigo Campos",
+                    "skills":["Scrum","Project","Office","Gestão de Equipe"]
+                },
+                {
+                    "nome":"Tarcisio Moura",
+                    "skills":["Shell Script","Linux","Apache","Segurança"]
+                },
+                {
+                    "nome":"Joselito Marmita",
+                    "skills":["Manutenção de PC","Cabeamento","Configuração"]
+                },
+                {
+                    "nome":"Fernando Pessoa",
+                    "skills":["Mídias Sociais","Marketing","Design"]
+                }
+            ]
+        }
+
+        document.write("<table> <tr><th>Nome</th> <th>Skills</th></tr>")
+
+        for(var i=0; i<dados.funcionarios.length; i++) {
+            document.write("<tr><td rowspan='" + ((dados.funcionarios[i].skills.length)+1) +"'>")
+            document.write(dados.funcionarios[i].nome + "</td>") 
+            
+            for(var a=0; a<dados.funcionarios[i].skills.length; a++) {
+                document.write("<tr><td>" + dados.funcionarios[i].skills[a])
+                document.write("</td></tr>")
+            }
+        }
+
+        document.write("</table>")
+    </script>
+
+</body>
+</html>

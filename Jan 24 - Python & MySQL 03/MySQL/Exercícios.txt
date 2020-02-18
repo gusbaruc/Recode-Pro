@@ -1,0 +1,10 @@
+1) SELECT * FROM `cliente`
+2) SELECT * FROM `cliente` WHERE cliente_id > 100
+3) SELECT * FROM `cidade` WHERE pais_id=10
+4) SELECT COUNT(*) FROM `aluguel`
+5) SELECT COUNT(*) FROM `aluguel` WHERE cliente_id = 14
+6) SELECT primeiro_nome, ultimo_nome from `cliente` WHERE cliente_id in (SELECT cliente_id FROM `aluguel` WHERE aluguel_id = 1000);
+7) SELECT DISTINCT(ano_de_lancamento) FROM `filme`
+8) UPDATE filme set ano_de_lancamento=2007 WHERE titulo LIKE 'B%'
+9) SELECT COUNT(*) FROM `filme` WHERE classificacao = 'PG-13' and preco_da_locacao > 2.40
+10) SELECT cidade.cidade, pais.pais FROM cidade, pais WHERE pais LIKE 'E%'

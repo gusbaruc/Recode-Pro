@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        var valorHora = Number(prompt("Quanto vc cobra pela hora?"))
+        var numAulas = Number(prompt("Quantas aulas você dá por mês?"))
+        var inss = Number(prompt("Qual o percentual de desconto do INSS?"))
+
+        var desconto = (valorHora * numAulas) * inss/100
+        document.write("Seu salário líquido será aproximadamente: R$", (valorHora*numAulas)-desconto)
+
+    </script>
+</body>
+</html>

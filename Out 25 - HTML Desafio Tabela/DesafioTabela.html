@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        table {
+            width:100%;
+        }
+        
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th {
+            text-align: center;
+        }
+
+        td {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th rowspan="3">Dia</th>
+            <th colspan="3">Seminário</th>
+        </tr>
+
+        <tr>
+            <th colspan="2">Agenda</th>
+            <th rowspan="2">Tópico</th>
+        </tr>
+
+        <tr>
+            <th>Início</th>
+            <th>Fim</th>
+        </tr>
+
+        <tr>
+            <td rowspan="2">Segunda-feira</td>
+            <td rowspan="2">8:00</td>
+            <td rowspan="2">17:00</td>
+            <td>Introdução ao HTML</td>
+        </tr>
+
+        <tr>
+            <td>Aprendendo sobre tabelas</td>
+        </tr>
+
+        <tr>
+            <td rowspan="3">Terça-feira</td>
+            <td>8:00</td>
+            <td>11:00</td>
+            <td rowspan="3">
+                <table>
+                    <tr>
+                        <td>Avançando com uso de tabelas <br>
+                            <ul>
+                                <li>Altura</li>
+                                <li>Largura</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Uso de tabelas complexas <br>
+                            <ul>
+                                <li>Alinhamentos</li>
+                                <li>Margens</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>11:00</td>
+            <td>14:00</td>
+        </tr>
+
+        <tr>
+            <td>14:00</td>
+            <td>17:00</td>
+        </tr>
+
+        <tr>
+            <td>Quarta-feira</td>
+            <td>8:00</td>
+            <td>17:00</td>
+            <td>Tornando-se especialista em tabelas</td>
+        </tr>
+    </table>
+</body>
+</html>

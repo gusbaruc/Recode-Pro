@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Aula 01 - Bootstrap</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
+    <style>
+        .container-fluid {
+            background-color: red;
+            height: 80px;
+            text-align: center;
+        }
+        img {
+            position: relative;
+            top: 15px;
+        }
+        .row {
+            padding-bottom: 50px;
+        }
+        .container {
+            position: relative;
+            top: 50px;
+        }
+        #titulo {
+            font-family: Helvetica,Arial,sans-serif;
+            font-weight: bold;
+            font-size: 48px;
+        }
+        #subtitulo {
+            font-family: Helvetica,Arial,sans-serif;
+            color: gray;
+            font-size: 18px;
+        }
+        #autor {
+            font-family: Helvetica,Arial,sans-serif;
+            font-weight: bold;
+            color: rgb(80, 80, 80);
+            font-size: 16px;;
+        }
+        #data {
+            font-family: Helvetica,Arial,sans-serif;
+            color: gray;
+            font-size: 14px;
+        }
+        #conteudo {
+            font-family: Helvetica,Arial,sans-serif;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <h2><img src="G1.png" height=50><h2>
+    </div>
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <h1 id="titulo">Google libera extensão para facilitar denúncia de sites maliciosos</h1>
+                <h1 id="subtitulo">Navegador Chrome também vai alertar usuário que visitar uma página com endereço enganoso.</h1>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <h1 id="autor">Por Altieres Rohr</h1>
+                <h1 id="data">21/06/2019 07h00 - Atualizado há uma semana</h1>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <p id="conteudo">
+                    O Google liberou uma extensão para o navegador Chrome que facilita a denúncia de páginas maliciosas ao sistema "Safe Browsing", 
+                    que analisa todas as páginas visitadas para bloquear sites potencialmente prejudiciais. O Safe Browsing é utilizado também pelo 
+                    Safari e pelo Firefox, então quem utiliza esses navegadores também poderá ser beneficiado pela melhora das denúncias ao Safe Browsing.
+                    <br><br>
+                    Outra novidade do Chrome é um alerta exibido quando o endereço de uma página for muito semelhante a outra página conhecida. 
+                    O objetivo é impedir fraudes ligadas a erros de digitação ou semelhança visual, como googkle (erro ao digitar "L") ou "go0gle" 
+                    (semelhança entre letra O e o zero). A função vale para todos os usuários a partir da versão 75 do Chrome.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script JS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

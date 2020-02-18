@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        var ini = Number(prompt("Digite o número inicial: "))
+        var fim = Number(prompt("Digite o número final: "))
+        var par = 0, impar = 0
+        
+        for (var i = ini; i <= fim; i++) {
+            if (i%2 == 0)
+                par++
+            else
+                impar++
+        }
+        
+        document.write(`Total de números ímpares entre ${ini} e ${fim} são: ${impar}`)
+        document.write(`<br>Total de números pares entre ${ini} e ${fim} são: ${par}`)
+    </script>
+</body>
+</html>

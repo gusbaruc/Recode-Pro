@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        var i = 1, maior = 0
+
+        do {
+            num = Number(prompt(`Digite o ${i}° número: `))
+            if (num > maior)
+                maior = num
+            i++
+        } while (i <= 5)
+
+        if (maior%2 == 0)
+            document.write(`O maior número digitado foi ${maior} e ele é um número par!`)
+        else
+        document.write(`O maior número digitado foi ${maior} e ele é um número ímpar!`)
+    </script>
+</body>
+</html>

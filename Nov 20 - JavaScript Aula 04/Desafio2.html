@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        //Atribuindo dados no formato JSON para a variável dados
+        var dados = {
+            "funcionarios":[
+                {
+                    "nome":"João da Silva",
+                    "projeto":"WebSite",
+                    "atividades":[
+                        {
+                            "tarefa":"Criar formulário",
+                            "prazo":"4"
+                        },
+                        {
+                            "tarefa":"Criar página de contatos",
+                            "prazo":"3"
+                        },
+                        {
+                            "tarefa":"Criar página principal",
+                            "prazo":"9"
+                        }
+                    ]
+                },
+                {
+                    "nome":"Renata Souza",
+                    "projeto":"Aplicativo",
+                    "atividades":[
+                        {
+                            "tarefa":"Criar aplicativo",
+                            "prazo":"40"
+                        },
+                        {
+                            "tarefa":"Publicar no AppStore",
+                            "prazo":"12"
+                        }
+                    ]
+                },
+                {
+                    "nome":"Rodrigo Campos",
+                    "projeto":"Gestão",
+                    "atividades":[
+                        {
+                            "tarefa":"Contratação de pessoal",
+                            "prazo":"31"
+                        },
+                        {
+                            "tarefa":"Alocação de recursos",
+                            "prazo":"2"
+                        }
+                    ]
+                },
+                {
+                    "nome":"Tarcisio Moura",
+                    "projeto":"Publicidade",
+                    "atividades":[
+                        {
+                            "tarefa":"Elaboração de campanha",
+                            "prazo":"15"
+                        }
+                    ]
+                }
+            ]
+        }
+
+        document.write("<table>" +
+                        "<tr>" +
+                            "<th>Nome</th>" + 
+                            "<th>Projeto</th>" +
+                            "<th>Atividade</th>" +
+                            "<th>Prazo de Entrega</th>" +
+                        "</tr>")
+
+        for(var i=0; i<dados.funcionarios.length; i++) {
+            document.write("<tr><td rowspan='" + ((dados.funcionarios[i].atividades.length)+1) +"'>")
+            document.write(dados.funcionarios[i].nome + "</td>") 
+            
+            for(var x=0; x<dados.funcionarios[i].atividades.length; x++) {
+                document.write("<td rowspan='" + ((dados.funcionarios[i].atividades.length)+1) +"'>")
+                document.write(dados.funcionarios[x].projeto + "</td>") 
+                //Parei aqui
+                for(var a=0; a<dados.funcionarios[i].skills.length; a++) {
+                    document.write("<tr><td>" + dados.funcionarios[i].skills[a])
+                    document.write("</td></tr>")
+                }
+            }
+        }
+
+        document.write("</table>")
+    </script>
+
+</body>
+</html>

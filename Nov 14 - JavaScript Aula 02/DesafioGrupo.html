@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='css/bootstrap.css'>
+    <title>Desafio 01</title>
+
+    <style>
+        .container {
+            position: relative;
+            top: 20px;
+            background-color: rgb(241, 240, 240);
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!--LINHA 1-->
+        <div class="row">
+            <div class="col">
+                <h1>Cadastro</h1>
+                <hr>
+            </div>
+        </div>
+
+        <!--LINHA 2-->
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <label>Nome:</label>
+                <input type="text" class="form-control" id="nome">
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <label>RG:</label>
+                <input type="text" class="form-control" id="rg">
+            </div>
+        </div>
+
+        <!--LINHA 3-->
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <label>Email:</label>
+                <input type="text" class="form-control" id="email">
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <label>CPF:</label>
+                <input type="text" class="form-control" id="cpf">
+            </div>
+        </div>
+
+        <!--LINHA 4--><br>
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <label>Nota 1:</label>
+                <input type="text" class="form-control" id="nota1">
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+                <label>Nota 2:</label>
+                <input type="text" class="form-control" id="nota2">
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+                <label>Nota 3:</label>
+                <input type="text" class="form-control" id="nota3">
+            </div>
+        </div>
+
+        <!--LINHA 5--><br>
+        <div class="row justify-content-end">
+            <div class="col-md-2">
+                <button type="button" class="btn btn-success" onclick="calculoMedia()">Calcular média</button>
+            </div>
+
+            <div class="col-md-2">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDados"
+                    onclick="formularioModal()">
+                    Dados do aluno
+                </button>
+
+                <!--Modal-->
+                <div class="modal fade" id="modalDados" tabindex="-1" role="dialog" aria-labelledby="titulo"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="titulo">Dados do aluno</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <div id="formulario"></div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+
+        <!--LINHA 6-->
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <label>Média:</label>
+                <input type="text" class="form-control" id="media" disabled>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <label>Situação:</label>
+                <input type="text" class="form-control" id="situacao" disabled>
+            </div>
+        </div><br>
+    </div>
+
+    <script>
+        //Criação do Objeto
+        var aluno = {
+            nome: "",
+            rg: "",
+            email: "",
+            cpf: "",
+            nota1: "",
+            nota2: "",
+            nota3: "",
+            situacao: "",
+            media: ""
+        }
+
+        function calculoMedia() {
+            //Atribuindo dados ao Objeto
+            aluno.nota1 = Number(document.getElementById("nota1").value)
+            aluno.nota2 = Number(document.getElementById("nota3").value)
+            aluno.nota3 = Number(document.getElementById("nota3").value)
+            aluno.media = (aluno.nota1 + aluno.nota2 + aluno.nota3) / 3
+
+            //Condicionais da Situação
+            if (aluno.media <= 5) {
+                document.getElementById("situacao").value = "Reprovado"
+            }
+            if (aluno.media > 5 && aluno.media <= 7) {
+                document.getElementById("situacao").value = "Recuperação"
+            }
+            if (aluno.media > 7) {
+                document.getElementById("situacao").value = "Aprovado"
+            }
+
+            //Imprimindo valor no TextBox
+            document.getElementById("media").value = aluno.media
+        }
+
+        function formularioModal() {
+            //Atribuindo dados ao Objeto
+            aluno.nome = document.getElementById("nome").value
+            aluno.rg = document.getElementById("rg").value
+            aluno.email = document.getElementById("email").value
+            aluno.cpf = document.getElementById("cpf").value
+            aluno.nota1 = Number(document.getElementById("nota1").value)
+            aluno.nota2 = Number(document.getElementById("nota2").value)
+            aluno.nota3 = Number(document.getElementById("nota3").value)
+
+            //Condicionais da Situação
+            if (aluno.media <= 5) {
+                aluno.situacao = "Reprovado"
+            }
+            if (aluno.media > 5 && aluno.media <= 7) {
+                aluno.situacao = "Recuperação"
+            }
+            if (aluno.media > 7) {
+                aluno.situacao = "Aprovado"
+            }
+
+            //Calculando e atribuindo média
+            aluno.media = (aluno.nota1 + aluno.nota2 + aluno.nota3) / 3
+
+            //Imprimindo valor no Modal
+            document.getElementById("formulario").innerHTML =
+                "Nome: " + aluno.nome +
+                "<br>RG: " + aluno.rg +
+                "<br>Email: " + aluno.email +
+                "<br>CPF: " + aluno.cpf +
+                "<br>Nota 1: " + aluno.nota1 +
+                "<br>Nota 2: " + aluno.nota2 +
+                "<br>Nota 3: " + aluno.nota3 +
+                "<br>Média: " + aluno.media +
+                "<br>Situação: " + aluno.situacao
+        }
+    </script>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
